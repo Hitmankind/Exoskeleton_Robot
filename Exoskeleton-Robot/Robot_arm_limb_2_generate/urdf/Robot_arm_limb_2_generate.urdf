@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot_arm_limb_2_generate">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00804760282804601 -0.0372453338284626 -0.0211255154858374"
+        rpy="0 0 0" />
+      <mass
+        value="0.0499805196842013" />
+      <inertia
+        ixx="2.04993457018384E-05"
+        ixy="5.50309939338631E-06"
+        ixz="1.01594909544029E-06"
+        iyy="7.73935000638258E-06"
+        iyz="3.78729602312972E-07"
+        izz="2.02726777102863E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leavearm_Link">
+    <inertial>
+      <origin
+        xyz="0.137018788242115 -0.00521713060857206 -0.000272514594205976"
+        rpy="0 0 0" />
+      <mass
+        value="0.177706414364813" />
+      <inertia
+        ixx="3.3738380515548E-05"
+        ixy="-1.40662735639552E-18"
+        ixz="4.29312291558817E-18"
+        iyy="0.000445741438528138"
+        iyz="-2.52321912724512E-20"
+        izz="0.000445391770420042" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/leavearm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/leavearm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leavearm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.010446 -0.042184 -0.023711"
+      rpy="-2.7611 0 -1.2152" />
+    <parent
+      link="base_link" />
+    <child
+      link="leavearm_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="littlearm_Link">
+    <inertial>
+      <origin
+        xyz="-0.0531666461045053 -0.00478837402356757 -0.00120716740999737"
+        rpy="0 0 0" />
+      <mass
+        value="0.160992883067043" />
+      <inertia
+        ixx="3.67851300559748E-05"
+        ixy="1.30000998079465E-06"
+        ixz="1.11484741723895E-07"
+        iyy="0.000117927502300699"
+        iyz="-6.18832259357421E-08"
+        izz="0.000135567123361309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/littlearm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/littlearm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="littlearm_joint"
+    type="revolute">
+    <origin
+      xyz="0.28839 -0.0024349 0.00064713"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="leavearm_Link" />
+    <child
+      link="littlearm_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hand_Link">
+    <inertial>
+      <origin
+        xyz="-0.000303154474825106 -0.0356631301276513 0.00832140811909846"
+        rpy="0 0 0" />
+      <mass
+        value="0.0778834156538248" />
+      <inertia
+        ixx="1.51585190167441E-05"
+        ixy="1.18348692827519E-08"
+        ixz="-8.68642850319908E-09"
+        iyy="1.50557000144223E-05"
+        iyz="1.64334486083025E-09"
+        izz="2.04933912395624E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/hand_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_arm_limb_2_generate/meshes/hand_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hand_joint"
+    type="revolute">
+    <origin
+      xyz="-0.15276 -0.015713 0.00042938"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="littlearm_Link" />
+    <child
+      link="hand_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

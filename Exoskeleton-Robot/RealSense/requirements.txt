@@ -1,0 +1,27 @@
+# RealSense机械臂系统依赖包
+
+# RealSense相机支持
+pyrealsense2>=2.50.0
+
+# 计算机视觉
+opencv-python>=4.5.0
+opencv-contrib-python>=4.5.0
+
+# 数值计算
+numpy>=1.20.0
+
+# 数据处理
+json5>=0.9.0
+
+# 可选：深度学习支持（如需要）
+# torch>=1.9.0
+# torchvision>=0.10.0
+# ultralytics>=8.0.0
+
+# 可选：3D可视化（如需要）
+# open3d>=0.13.0
+# matplotlib>=3.3.0
+
+# 可选：机器人控制接口（根据具体机器人选择）
+# robotics-toolbox-python>=1.0.0
+# modern_robotics>=1.0.0
